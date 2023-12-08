@@ -1,0 +1,108 @@
+Title: Migrating System Monitoring and Metrics from Prometheus and Grafana to Datadog
+
+Objective:
+The purpose of this document is to provide a comprehensive guide on migrating system monitoring and metrics from Prometheus and Grafana to Datadog. This migration aims to improve the observability of application performance and enhance the security monitoring capabilities of the organization.
+
+Prerequisites:
+
+Existing setup of Prometheus and Grafana for system monitoring and metrics.
+Active Datadog account with necessary permissions.
+Steps:
+
+Data Export from Prometheus and Grafana:
+
+In Grafana, navigate to the dashboard that contains the metrics you want to export.
+Click on the 'Share' button, usually located at the top of the dashboard.
+In the 'Export' tab, select 'Save to file' and choose the desired format (CSV, JSON, etc.).
+Save the exported data in a secure location for backup purposes.
+For Prometheus, use the HTTP API to query and retrieve the metrics data. The query can be executed using tools like curl or any HTTP client.
+Save the exported data from Prometheus in the same secure location.
+
+Setting Up Datadog:
+
+etting Up Datadog:
+
+Log in to your Datadog account:
+
+If you don't have an account, you can sign up for a free trial on the Datadog website.
+
+Navigate to the 'Integrations' section:
+
+On the left-hand side of the dashboard, click on 'Integrations'.
+This will take you to a page where you can see all the available integrations.
+
+Add Prometheus as an integration:
+
+In the 'Integrations' section, search for 'Prometheus'.
+Click on the 'Prometheus' tile to add it as an integration.
+Follow the on-screen instructions to complete the integration setup.
+This may include installing the Datadog agent on your servers and configuring it to collect data from Prometheus.
+
+Data Import to Datadog:
+
+Navigate to the 'Metrics' section:
+
+On the left-hand side of the dashboard, click on 'Metrics'.
+This will take you to a page where you can see all the metrics that Datadog is collecting.
+
+Use the 'Import' option:
+
+Click on the 'Import' button to upload the previously exported data from Prometheus and Grafana.
+You may need to format the data correctly before importing it.
+
+Verify the data:
+
+Once the data has been imported, verify that it is visible in the Datadog dashboard.
+Check that all the metrics are being displayed correctly and that there are no errors.
+
+Configuring Datadog for System Monitoring:
+
+Set up dashboards:
+
+Create dashboards in Datadog for system monitoring and metrics.
+You can customize the dashboards to display the metrics that are most important to you.
+
+Configure alerts and thresholds:
+
+Set up alerts to notify you when certain metrics exceed predefined thresholds.
+This will help you to identify and address issues before they become critical.
+
+Test the alerts:
+
+Test the alerts to ensure that they are working as expected.
+You can do this by creating a test alert and verifying that you receive the notification.
+
+Verifying the Migration:
+
+Monitor the system:
+
+Use Datadog to monitor the system for a specified period to ensure that all metrics are being captured accurately.
+Pay attention to any anomalies or errors that may occur.
+
+Compare the data:
+
+Compare the data in Datadog with the backup data to verify the accuracy of the migration.
+Check that all the metrics match and that there are no discrepancies.
+If you find any issues, address them promptly to ensure the integrity of the migration
+
+Troubleshooting: 
+
+If there are any errors, start by checking the format of the imported data. Ensure that it is compatible with Datadog's requirements.
+Check the import logs for any error messages or warnings that could provide more information on what went wrong.
+If you are unable to resolve the issue, reach out to Datadog's support team for assistance.
+
+Re-import Data if Necessary:
+
+If the errors cannot be resolved, you may need to re-import the data.
+Before re-importing, make sure to correct any formatting issues or other problems that may have caused the initial import to fail.
+
+Verify Again:
+
+After resolving the errors and re-importing the data, verify again that all the metrics are displayed correctly in the Datadog dashboard.
+Check that there are no remaining discrepancies or anomalies.
+
+Additional Resources:
+
+Datadog Documentation
+Prometheus Documentation
+Grafana Documentation
